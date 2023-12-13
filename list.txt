@@ -1,4 +1,3 @@
-https://github.com/abi/screenshot-to-code
 https://github.com/magic-research/magic-animate
 https://github.com/HumanAIGC/AnimateAnyone
 http://github.com/Vaibhavs10/insanely-fast-whisper
@@ -15,7 +14,6 @@ https://github.com/imartinez/privateGPT
 https://github.com/facebookresearch/audiocraft
 https://github.com/huggingface/diffusers
 https://github.com/xinyu1205/Recognize_Anything-Tag2Text
-https://github.com/datawhalechina/prompt-engineering-for-developers
 https://github.com/labring/FastGPT
 https://github.com/songquanpeng/one-api
 https://github.com/Agenta-AI/agenta
