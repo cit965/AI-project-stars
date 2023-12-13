@@ -9,6 +9,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 	"unicode"
 )
@@ -44,6 +45,8 @@ const (
 A list of popular github projects related to Go web framework (ranked by stars automatically)
 Please update **list.txt** (via Pull Request)
 
+<a href="./README.md">视频</a> | <a href="./READMElearn.md">学习</a> |   <a href="./READMEpicture.md">图像</a> |   <a href="./READMEaudio.md">音频</a> | 
+
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
 `
@@ -54,13 +57,36 @@ Please update **list.txt** (via Pull Request)
 
 var (
 	deprecatedRepos = [3]string{"https://github.com/go-martini/martini", "https://github.com/pilu/traffic", "https://github.com/gorilla/mux"}
-	repos           []Repo
 )
 
 func main() {
+	var wait sync.WaitGroup
+	wait.Add(3)
+	go func() {
+		generate("")
+		wait.Done()
+	}()
+	go func() {
+		generate("learn")
+		wait.Done()
+	}()
+	go func() {
+		generate("picture")
+		wait.Done()
+	}()
+
+	go func() {
+		generate("audio")
+		wait.Done()
+	}()
+	wait.Wait()
+}
+
+func generate(category string) {
+	var repos []Repo
 	accessToken := getAccessToken()
 
-	byteContents, err := ioutil.ReadFile("list.txt")
+	byteContents, err := ioutil.ReadFile("list" + category + ".txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -135,7 +161,7 @@ func main() {
 	sort.Slice(repos, func(i, j int) bool {
 		return repos[i].Stars > repos[j].Stars
 	})
-	saveRanking(repos)
+	saveRanking(repos, category)
 }
 
 func trimSpaceAndSlash(r rune) bool {
@@ -150,8 +176,8 @@ func getAccessToken() string {
 	return strings.TrimSpace(string(tokenBytes))
 }
 
-func saveRanking(repos []Repo) {
-	readme, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
+func saveRanking(repos []Repo, filesufix string) {
+	readme, err := os.OpenFile("README"+filesufix+".md", os.O_RDWR|os.O_TRUNC, 0666)
 	if err != nil {
 		log.Fatal(err)
 	}
