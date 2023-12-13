@@ -164,6 +164,7 @@ func saveRanking(repos []Repo) {
 		readme.WriteString(fmt.Sprintf("| [%s](%s) | %d | %d | %d | %s | %v |\n", repo.Name, repo.URL, repo.Stars, repo.Forks, repo.Issues, repo.Description, repo.LastCommitDate.Format("2006-01-02 15:04:05")))
 	}
 	readme.WriteString(fmt.Sprintf(tail, time.Now().Format(time.RFC3339)))
+	readme.WriteString(`欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) `)
 }
 
 func isDeprecated(repoURL string) bool {
