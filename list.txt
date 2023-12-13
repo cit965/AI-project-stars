@@ -5,3 +5,16 @@ https://github.com/ml-explore/mlx
 https://github.com/CompVis/stable-diffusion
 https://github.com/hncboy/ai-beehive
 https://github.com/iperov/DeepFaceLive
+https://github.com/datawhalechina/prompt-engineering-for-developers
+https://github.com/linexjlin/GPTs
+https://github.com/AprilNEA/ChatGPT-Admin-Web
+https://github.com/novicezk/midjourney-proxy
+https://github.com/xtekky/gpt4free
+https://github.com/TheRamU/Fay
+https://github.com/imartinez/privateGPT
+https://github.com/facebookresearch/audiocraft
+https://github.com/huggingface/diffusers
+https://github.com/xinyu1205/Recognize_Anything-Tag2Text
+https://github.com/labring/FastGPT
+https://github.com/songquanpeng/one-api
+https://github.com/Agenta-AI/agenta

@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -61,7 +62,7 @@ var (
 
 func main() {
 	var wait sync.WaitGroup
-	wait.Add(3)
+	wait.Add(4)
 	go func() {
 		if err := generate(""); err != nil {
 			fmt.Println("err generate main readme", err)
@@ -92,6 +93,7 @@ func main() {
 }
 
 func generate(category string) error {
+
 	var repos []Repo
 	accessToken := getAccessToken()
 
@@ -99,9 +101,17 @@ func generate(category string) error {
 	if err != nil {
 		return err
 	}
-
+	removeduplate := map[string]string{}
 	lines := strings.Split(string(byteContents), "\n")
 	for _, url := range lines {
+
+		if v, ok := removeduplate[url]; ok {
+			fmt.Println("error duplate", v)
+			return errors.New("error duplate")
+		} else {
+			removeduplate[url] = "1"
+		}
+
 		if strings.HasPrefix(url, "https://github.com/") {
 			var repo Repo
 			var commit HeadCommit
