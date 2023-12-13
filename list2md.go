@@ -64,31 +64,39 @@ func main() {
 	wait.Add(3)
 	go func() {
 		generate("")
+		fmt.Println("err generate main readme")
 		wait.Done()
 	}()
 	go func() {
-		generate("learn")
+		if err := generate("learn"); err != nil {
+			fmt.Println("err generate learn readme", err)
+		}
+
 		wait.Done()
 	}()
 	go func() {
-		generate("picture")
+		if err := generate("picture"); err != nil {
+			fmt.Println("err generate picture readme", err)
+		}
 		wait.Done()
 	}()
 
 	go func() {
-		generate("audio")
+		if err := generate("audio"); err != nil {
+			fmt.Println("err generate audio readme", err)
+		}
 		wait.Done()
 	}()
 	wait.Wait()
 }
 
-func generate(category string) {
+func generate(category string) error {
 	var repos []Repo
 	accessToken := getAccessToken()
 
 	byteContents, err := ioutil.ReadFile("list" + category + ".txt")
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	lines := strings.Split(string(byteContents), "\n")
@@ -105,13 +113,13 @@ func generate(category string) {
 
 			req, err := http.NewRequest(http.MethodGet, repoAPI, nil)
 			if err != nil {
-				log.Fatal(err)
+				return err
 			}
 			req.Header.Set("authorization", fmt.Sprintf("Bearer %s", accessToken))
 
 			resp, err := http.DefaultClient.Do(req)
 			if err != nil {
-				log.Fatal(err)
+				return err
 			}
 			if resp.StatusCode != 200 {
 				log.Fatal(resp.Status)
@@ -119,7 +127,7 @@ func generate(category string) {
 
 			decoder := json.NewDecoder(resp.Body)
 			if err = decoder.Decode(&repo); err != nil {
-				log.Fatal(err)
+				return err
 			}
 
 			commitAPI := fmt.Sprintf(
@@ -131,13 +139,13 @@ func generate(category string) {
 
 			req, err = http.NewRequest(http.MethodGet, commitAPI, nil)
 			if err != nil {
-				log.Fatal(err)
+				return err
 			}
 			req.Header.Set("authorization", fmt.Sprintf("Bearer %s", accessToken))
 
 			resp, err = http.DefaultClient.Do(req)
 			if err != nil {
-				log.Fatal(err)
+				return err
 			}
 			if resp.StatusCode != 200 {
 				log.Fatal(resp.Status)
@@ -145,7 +153,7 @@ func generate(category string) {
 
 			decoder = json.NewDecoder(resp.Body)
 			if err = decoder.Decode(&commit); err != nil {
-				log.Fatal(err)
+				return err
 			}
 
 			repo.LastCommitDate = commit.Commit.Committer.Date
@@ -162,6 +170,7 @@ func generate(category string) {
 		return repos[i].Stars > repos[j].Stars
 	})
 	saveRanking(repos, category)
+	return nil
 }
 
 func trimSpaceAndSlash(r rune) bool {
