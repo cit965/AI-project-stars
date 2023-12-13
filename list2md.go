@@ -63,8 +63,9 @@ func main() {
 	var wait sync.WaitGroup
 	wait.Add(3)
 	go func() {
-		generate("")
-		fmt.Println("err generate main readme")
+		if err := generate(""); err != nil {
+			fmt.Println("err generate main readme", err)
+		}
 		wait.Done()
 	}()
 	go func() {

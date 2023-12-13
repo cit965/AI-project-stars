@@ -6,7 +6,7 @@ Please update **list.txt** (via Pull Request)
 
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
-| [GPTs](https://github.com/linexjlin/GPTs) | 18572 | 2688 | 5 | leaked prompts of GPTs | 2023-12-13 03:22:03 |
+| [GPTs](https://github.com/linexjlin/GPTs) | 18580 | 2690 | 5 | leaked prompts of GPTs | 2023-12-13 03:22:03 |
 | [prompt-engineering-for-developers](https://github.com/datawhalechina/prompt-engineering-for-developers) | 7360 | 892 | 0 | 面向开发者的 LLM 入门教程，吴恩达大模型系列课程中文版 | 2023-12-02 03:15:53 |
 
-*Last Automatic Update: 2023-12-13T16:30:20+08:00*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
+*Last Automatic Update: 2023-12-13T16:34:50+08:00*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
