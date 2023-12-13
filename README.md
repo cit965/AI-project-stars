@@ -28,8 +28,4 @@ Please update **list.txt** (via Pull Request)
 | [gpts-works](https://github.com/all-in-aigc/gpts-works) | 962 | 161 | 2 | A Third-party GPTs store | 2023-11-23 13:14:23 |
 | [agenta](https://github.com/Agenta-AI/agenta) | 559 | 112 | 67 | The all-in-one LLMOps platform: prompt management, evaluation, human feedback, and deployment all in one place. | 2023-12-12 16:05:13 |
 
-<<<<<<< HEAD
-*Last Automatic Update: 2023-12-13T16:13:58+08:00*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
-=======
 *Last Automatic Update: 2023-12-13T08:15:22Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
->>>>>>> master

@@ -41,8 +41,8 @@ type HeadCommit struct {
 }
 
 const (
-	head = `# Top Go Web Frameworks
-A list of popular github projects related to Go web framework (ranked by stars automatically)
+	head = `# Top AI projects
+A list of popular github projects related to AI (ranked by stars automatically)
 Please update **list.txt** (via Pull Request)
 
 <a href="./README.md">视频</a> | <a href="./READMElearn.md">学习</a> |   <a href="./READMEpicture.md">图像</a> |   <a href="./READMEaudio.md">音频</a> | 
