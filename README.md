@@ -1,5 +1,5 @@
-# Top Go Web Frameworks
-A list of popular github projects related to Go web framework (ranked by stars automatically)
+# Top AI project
+A list of popular github projects related to AI project (ranked by stars automatically)
 Please update **list.txt** (via Pull Request)
 
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
