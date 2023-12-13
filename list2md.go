@@ -45,7 +45,7 @@ const (
 A list of popular github projects related to AI (ranked by stars automatically)
 Please update **list.txt** (via Pull Request)
 
-<a href="./README.md">视频</a> | <a href="./READMElearn.md">学习</a> |   <a href="./READMEpicture.md">图像</a> |   <a href="./READMEaudio.md">音频</a> | 
+<a href="./README.md">全部</a> |   <a href="./READMEpicture.md">图像</a> |   <a href="./READMEaudio.md">音频</a> | <a href="./READMEvideo.md">视频</a> | <a href="./READMElearn.md">学习</a> | 
 
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
@@ -197,7 +197,7 @@ func saveRanking(repos []Repo, filesufix string) {
 		if isDeprecated(repo.URL) {
 			repo.Description = warning + repo.Description
 		}
-		readme.WriteString(fmt.Sprintf("| [%s](%s) | %d | %d | %d | %s | %v |\n", repo.Name, repo.URL, repo.Stars, repo.Forks, repo.Issues, repo.Description, repo.LastCommitDate.Format("2006-01-02 15:04:05")))
+		readme.WriteString(fmt.Sprintf("| [%s](%s) | %d | %d | %d | %s | %v |\n", repo.Name, repo.URL, repo.Stars, repo.Forks, repo.Issues, repo.Description, repo.LastCommitDate.Format("2006-01-02")))
 	}
 	readme.WriteString(fmt.Sprintf(tail, time.Now().Format(time.RFC3339)))
 	readme.WriteString(`欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) `)

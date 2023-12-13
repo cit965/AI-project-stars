@@ -2,7 +2,6 @@ https://github.com/datawhalechina/prompt-engineering-for-developers
 https://github.com/linexjlin/GPTs
 https://github.com/AprilNEA/ChatGPT-Admin-Web
 https://github.com/novicezk/midjourney-proxy
-https://github.com/all-in-aigc/gpts-works
 https://github.com/xtekky/gpt4free
 https://github.com/TheRamU/Fay
 https://github.com/imartinez/privateGPT
