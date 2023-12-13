@@ -19,3 +19,5 @@ https://github.com/labring/FastGPT
 https://github.com/songquanpeng/one-api
 https://github.com/Agenta-AI/agenta
 https://github.com/langgenius/dify
+https://github.com/YORG-AI/Open-Assistant
+https://github.com/k8sgpt-ai/k8sgpt
