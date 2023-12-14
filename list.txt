@@ -21,3 +21,5 @@ https://github.com/Agenta-AI/agenta
 https://github.com/langgenius/dify
 https://github.com/YORG-AI/Open-Assistant
 https://github.com/k8sgpt-ai/k8sgpt
+https://github.com/willwulfken/MidJourney-Styles-and-Keywords-Reference
+https://github.com/svc-develop-team/so-vits-svc
