@@ -8,4 +8,4 @@ Please update **list.txt** (via Pull Request)
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
 | [audio-ai-timeline](https://github.com/archinetai/audio-ai-timeline) | 1828 | 65 | 6 | A timeline of the latest AI models for audio generation, starting in 2023! | 2023-11-16 |
 
-*Last Automatic Update: 2024-02-29T04:18:25Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
+*Last Automatic Update: 2024-03-01T04:19:34Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
