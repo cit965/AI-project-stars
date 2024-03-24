@@ -6,6 +6,6 @@ Please update **list.txt** (via Pull Request)
 
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
-| [screenshot-to-code](https://github.com/abi/screenshot-to-code) | 46346 | 5474 | 82 | Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue) | 2024-03-22 |
+| [screenshot-to-code](https://github.com/abi/screenshot-to-code) | 46530 | 5500 | 83 | Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue) | 2024-03-22 |
 
-*Last Automatic Update: 2024-03-23T04:19:56Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
+*Last Automatic Update: 2024-03-24T04:20:19Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
