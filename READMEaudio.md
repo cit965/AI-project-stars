@@ -6,6 +6,6 @@ Please update **list.txt** (via Pull Request)
 
 | Project Name | Stars | Forks | Open Issues | Description | Last Commit |
 | ------------ | ----- | ----- | ----------- | ----------- | ----------- |
-| [audio-ai-timeline](https://github.com/archinetai/audio-ai-timeline) | 1853 | 66 | 2 | A timeline of the latest AI models for audio generation, starting in 2023! | 2023-11-16 |
+| [audio-ai-timeline](https://github.com/archinetai/audio-ai-timeline) | 1855 | 66 | 2 | A timeline of the latest AI models for audio generation, starting in 2023! | 2023-11-16 |
 
-*Last Automatic Update: 2024-03-26T04:18:10Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
+*Last Automatic Update: 2024-03-27T04:20:11Z*欢迎加入我们的社群 ![](https://raw.githubusercontent.com/mouuii/picture/master/weichat.jpg) 
